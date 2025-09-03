@@ -1,1 +1,271 @@
-This is a project created to describe my journey as a cybersecurity(SOC analyst)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Portfolio</title>
+  <style>
+    /* Background gradient with animation */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(270deg, white, #cce7ff, #66ccff);
+      background-size: 600% 600%;
+      animation: gradientShift 15s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: #2ecc71; /* green strip */
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      position: relative;
+      z-index: 2;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-left img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #333;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem;
+      animation: fadeIn 2s ease-in-out;
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #2ecc71;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      margin-bottom: 1rem;
+    }
+
+    .profile h2 {
+      margin: 0.5rem 0;
+      color: #333;
+    }
+
+    .section {
+      padding: 2rem;
+      text-align: center;
+      animation: slideUp 1.5s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    .skills, .projects, .certifications {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.9);
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #2ecc71;
+      color: white;
+      position: relative;
+      z-index: 2;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: opacity 0.3s;
+    }
+
+    .socials a:hover {
+      opacity: 0.7;
+    }
+
+    /* Floating particles */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: rgba(255,255,255,0.8);
+      border-radius: 50%;
+      animation: float 15s linear infinite;
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh) scale(0.5); opacity: 0; }
+      20% { opacity: 1; }
+      to { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="https://via.placeholder.com/60" alt="Profile Thumbnail">
+      <span>My Interactive Portfolio</span>
+    </div>
+    <nav>
+      <a href="#profile">Profile</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="profile" class="profile">
+    <img src="https://via.placeholder.com/150" alt="Profile Picture">
+    <h2>John Doe</h2>
+    <p>Ethical Hacker | Developer | Security Specialist</p>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Services Offered</h2>
+    <div class="skills">
+      <div class="card">Ethical Hacking</div>
+      <div class="card">System Penetration Testing</div>
+      <div class="card">Vulnerability Assessment</div>
+      <div class="card">App Development</div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Key Skills</h2>
+    <div class="skills">
+      <div class="card">Ethical Hacker</div>
+      <div class="card">Systems Penetration</div>
+      <div class="card">Vulnerability Testing</div>
+      <div class="card">App Development</div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects Done</h2>
+    <div class="projects">
+      <div class="card">Configured Hotel Systems</div>
+      <div class="card">Managed Hotel Network Installation</div>
+      <div class="card">Implemented Fraud Prevention Systems</div>
+    </div>
+  </section>
+
+  <section id="certifications" class="section">
+    <h2>Certifications & Badges</h2>
+    <div class="certifications">
+      <div class="card">Certified Ethical Hacker (CEH)</div>
+      <div class="card">CISSP</div>
+      <div class="card">OSCP</div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Info</h2>
+    <p>Email: johndoe@example.com</p>
+    <p>Address: 123 Tech Street, Cyber City</p>
+    <div class="socials">
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 John Doe | All Rights Reserved
+  </footer>
+
+  <!-- Floating Particles -->
+  <div class="particles" id="particles"></div>
+
+  <script>
+    // Generate floating particles dynamically
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 30; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = Math.random() * 100 + 'vw';
+      particle.style.animationDuration = (10 + Math.random() * 20) + 's';
+      particle.style.animationDelay = Math.random() * 10 + 's';
+      particlesContainer.appendChild(particle);
+    }
+  </script>
+</body>
+</html>
